@@ -1,0 +1,28 @@
+@font-face{
+  font-family:'jetBrains-regular';
+  src: local('jetBrains-regular'),url(./assets/fuentes/JetBrainsMono-Regular.ttf) ;
+}
+@font-face{
+  font-family:'jetBrains-bold';
+  src: local('jetBrains-bold'),url(./assets/fuentes/JetBrainsMono-Regular.ttf) ;
+}
+body{
+  font-family:'jetBrains-regular' ;
+}
+header , footer {
+  padding-top: 15px;
+  padding-left: 15px;
+  background-color: blueviolet;
+  height: 45px;
+  color: white;
+
+}
+#logo{
+  height: 30px;
+  margin-right: 10px;
+}
+
+main {
+  min-height: 400px;
+}
+
