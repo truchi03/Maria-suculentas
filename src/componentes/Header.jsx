@@ -7,7 +7,7 @@ export function Header(props) {
     const setPage = props.setPage
 
     return (
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="primary" variant="dark" id="header">
             <Container>
             <Navbar.Brand 
                 href="#inicio"

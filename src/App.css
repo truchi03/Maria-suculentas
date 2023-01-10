@@ -6,13 +6,22 @@
   font-family:'jetBrains-bold';
   src: local('jetBrains-bold'),url(./assets/fuentes/JetBrainsMono-Regular.ttf) ;
 }
+:root{
+  --color1: #00204a; 
+  --color2: #005792; 
+  --color3: #00bbf0; 
+  --color4: #fdb44b; 
+}
+
+#header , #footer{
+  background-color: var(--color1) !important;
+}
 body{
-  font-family:'jetBrains-regular' ;
+  font-family:'jetBrains-regular' !important ;
 }
 header , footer {
   padding-top: 15px;
   padding-left: 15px;
-  background-color: blueviolet;
   height: 45px;
   color: white;
 
@@ -26,3 +35,22 @@ main {
   min-height: 400px;
 }
 
+#main {
+  max-height: calc(100% - 120px) ;
+  overflow: auto;
+  width: 100%;
+  position: fixed;
+}
+
+#home-logo {
+  max-width: 500px;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

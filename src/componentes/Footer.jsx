@@ -1,7 +1,7 @@
 export function Footer () {
     return (
-        <footer>
-            Contacto
+        <footer id="footer">
+         <p className="text-center">Contacto</p>   
         </footer>
     )
 }
