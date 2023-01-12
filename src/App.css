@@ -1,32 +1,36 @@
-@font-face{
-  font-family:'jetBrains-regular';
-  src: local('jetBrains-regular'),url(./assets/fuentes/JetBrainsMono-Regular.ttf) ;
-}
-@font-face{
-  font-family:'jetBrains-bold';
-  src: local('jetBrains-bold'),url(./assets/fuentes/JetBrainsMono-Regular.ttf) ;
-}
-:root{
-  --color1: #00204a; 
-  --color2: #005792; 
-  --color3: #00bbf0; 
-  --color4: #fdb44b; 
+@font-face {
+  font-family: 'JetBrains-regular';
+  src: local('JetBrains-regular'), url(./assets/fonts/JetBrainsMono-Regular.ttf);
 }
 
-#header , #footer{
+@font-face {
+  font-family: 'JetBrains-bold';
+  src: local('JetBrains-bold'), url(./assets/fonts/JetBrainsMono-Bold.ttf);
+}
+
+:root {
+  --color1: #283739;
+	--color2: #2c5d63; 
+	--color3: #a2c11c;
+  --color4: #e0e0e0;
+}
+
+#header, #footer {
   background-color: var(--color1) !important;
 }
-body{
-  font-family:'jetBrains-regular' !important ;
+
+body {
+  font-family: 'JetBrains-regular' !important;
 }
-header , footer {
+
+header, footer {
   padding-top: 15px;
   padding-left: 15px;
   height: 45px;
   color: white;
-
 }
-#logo{
+
+#logo {
   height: 30px;
   margin-right: 10px;
 }
@@ -36,10 +40,10 @@ main {
 }
 
 #main {
-  max-height: calc(100% - 120px) ;
+  position: fixed;
+  max-height: calc(100% - 120px);
   overflow: auto;
   width: 100%;
-  position: fixed;
 }
 
 #home-logo {
