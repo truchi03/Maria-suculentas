@@ -8,6 +8,8 @@ import avena from './assets/imgs/avena.jpg'
 import hiperico from './assets/imgs/hiperico.jpg'
 import melisa from './assets/imgs/melisa.jpg'
 import lavanda from './assets/imgs/lavanda.jpg'
+import clientPic from './assets/imgs/default.gif'
+import providerPic from './assets/imgs/default.gif'
 
 function App() {
   const [page, setPage] = useState('inicio')
@@ -57,9 +59,101 @@ function App() {
     }
   ]
 
+  const clients = [
+    {
+      image: clientPic,
+      name: 'Michael Jackson', 
+      document: '36787665341', 
+      email: 'mjackson@gmail.com', 
+      address: 'Cl 35 # 56 - 89', 
+      neighborhood: 'Boston', 
+      contactPhone: '3123678908'
+    },
+    {
+      image: clientPic,
+      name: 'John Bon Jovi', 
+      document: '3235346754', 
+      email: 'jbonjovi@gmail.com', 
+      address: 'Cra 26 # 47 - 15', 
+      neighborhood: 'La América', 
+      contactPhone: '3128744567'
+    },
+    {
+      image: clientPic,
+      name: 'Alejandra Guzman', 
+      document: '3235346754', 
+      email: 'aguzman@hotmail.com', 
+      address: 'Trasv 76 # 58 - 15', 
+      neighborhood: 'Belén', 
+      contactPhone: '3120982354'
+    },
+    {
+      image: clientPic,
+      name: 'Sala Corrales', 
+      document: '3232309408', 
+      email: 'scorrales@gmail.com', 
+      address: 'Av 46 # 97 - 23', 
+      neighborhood: 'La Candelaria', 
+      contactPhone: '3129877655'
+    },
+  ]
+
+  const providers = [
+    {
+      image: providerPic,
+      name: 'ACME', 
+      nit: '444567656-5', 
+      address: 'Cl 26 # 75 - 35', 
+      phone: '4565656', 
+      email: 'acme@yopmail.com', 
+      product: 'Avena', 
+      companyDescription: 'Descripción de la empresa',
+      productDescription: 'Descripción del producto'
+    },
+    {
+      image: providerPic,
+      name: 'STARK INDUSTRIES', 
+      nit: '4563498996-4', 
+      address: 'Cl 60 # 115 - 55', 
+      phone: '54656756', 
+      email: 'starkind@yopmail.com', 
+      product: 'Melisa', 
+      companyDescription: 'Descripción de la empresa',
+      productDescription: 'Descripción del producto'
+    },
+    {
+      image: providerPic,
+      name: 'Proveedor 3', 
+      nit: '4563498996-4', 
+      address: 'Cl 60 # 115 - 55', 
+      phone: '54656756', 
+      email: 'starkind@yopmail.com', 
+      product: 'Melisa', 
+      companyDescription: 'Descripción de la empresa',
+      productDescription: 'Descripción del producto'
+    },
+    {
+      image: providerPic,
+      name: 'Proveedor 4', 
+      nit: '4563498996-4', 
+      address: 'Cl 60 # 115 - 55', 
+      phone: '54656756', 
+      email: 'starkind@yopmail.com', 
+      product: 'Melisa', 
+      companyDescription: 'Descripción de la empresa',
+      productDescription: 'Descripción del producto'
+    },
+  ]
+
   useEffect(() => {
     if(!localStorage.getItem('products')) {
       localStorage.setItem('products', JSON.stringify(products))
+    }
+    if(!localStorage.getItem('clients')) {
+      localStorage.setItem('clients', JSON.stringify(clients))
+    }
+    if(!localStorage.getItem('providers')) {
+      localStorage.setItem('providers', JSON.stringify(providers))
     }
   })
 
