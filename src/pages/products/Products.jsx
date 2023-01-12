@@ -1,4 +1,3 @@
-// https://www.hogarmania.com/salud/salud-familiar/remedios-naturales/plantas-relajantes-para-bienestar-emocional-12913.html
 import { Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { ModalMS } from '../../components/ModalMS'

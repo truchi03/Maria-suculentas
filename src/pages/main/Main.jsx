@@ -1,6 +1,7 @@
 import { Home } from '../home/Home'
 import { Products } from '../products/Products'
 import { Clients } from '../clients/Clients'
+import { Providers } from '../providers/Providers'
 
 export function Main(props) {
   const page = props.page
@@ -13,7 +14,7 @@ export function Main(props) {
         page === 'clientes' ?
         <Clients/> :
         page === 'proveedores' ?
-        <h2>Proveedores</h2> :
+        <Providers/> :
         <Home/>
       }
     </div>
