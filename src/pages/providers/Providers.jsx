@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { ModalMS } from '../../components/ModalMS'
-import defaultImg from '../../assets/imgs/default.gif'
+import providerImg from '../../assets/imgs/provider.gif'
 import { useState } from 'react'
 
 export function Providers() {
@@ -25,7 +25,7 @@ export function Providers() {
     inputs.forEach(inp => {
       newProvider[inp.name] = document.getElementById(inp.name).value
     })
-    providersTemp.push({...newProvider, image: defaultImg})
+    providersTemp.push({...newProvider, image: providerImg})
     localStorage.setItem('providers', JSON.stringify(providersTemp))
     setProveedores(providersTemp)
   }
@@ -46,7 +46,7 @@ export function Providers() {
         <Row>
           {
             providers.map((prov, i) => {
-              return <Col key={i}>
+              return <Col key={i} className='mb-4'>
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={prov.image} />
                   <Card.Body>

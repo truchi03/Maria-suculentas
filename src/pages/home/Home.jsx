@@ -1,52 +1,79 @@
-import { Container } from 'react-bootstrap'
-import logo from '../../assets/imgs/logo-text.png'
+import { Carousel, Container } from 'react-bootstrap'
+import logo from '../../assets/imgs/logo-text.gif'
+import img1 from '../../assets/imgs/home-01.jpeg'
+import img3 from '../../assets/imgs/home-03.jpeg'
+import img4 from '../../assets/imgs/home-04.jpeg'
+import img7 from '../../assets/imgs/home-07.jpeg'
 
 export function Home() {
+  const carouselItems = [
+    {
+      img: img1, 
+      label: 'Aloe Vera', 
+      alt: 'Imagen 1', 
+      p: `La planta de aloe vera es conocida por sus propiedades curativas 
+        para la piel y el cabello. Además de ser fácil de cuidar, esta planta 
+        purifica el aire y crea un ambiente relajante en cualquier espacio.`
+    },
+    {
+      img: img3, 
+      label: 'Serenity Blossom', 
+      alt: 'Imagen 3', 
+      p: `La planta de Serenity Blossom es conocida por sus beneficios relajantes para 
+      el sistema nervioso. Con su aroma suave y relajante, esta planta es 
+      perfecta para el dormitorio o cualquier espacio de meditación.`
+    },
+    {
+      img: img4, 
+      label: 'Tranquil Petals', 
+      alt: 'Imagen 4', 
+      p: `La planta de Tranquil Petals es conocida por su aroma dulce y afrodisíaco. 
+      Además de mejorar la calidad del aire, esta planta también ayuda a 
+      mejorar el estado de ánimo y la concentración.`
+    },
+    {
+      img: img7, 
+      label: 'Harmony Leaves', 
+      alt: 'Imagen 7', 
+      p: `La planta de Harmony Leaves es conocida por su capacidad para sobrevivir en 
+        condiciones extremas. Además de ser resistente y fácil de cuidar, esta 
+        planta también ayuda a purificar el aire y crea un ambiente positivo 
+        en cualquier espacio.`
+    },
+  ]
   return (
     <div id="home">
-      <Container>
-Validaciones forms
-      <img src={logo} alt="Logo" id="home-logo" />
-        <p>
-          <b>1. Empresa Maria Suculentas</b><br/><br/>
-          a. La empresa María Suculentas SAS es una empresa que se
-          encarga del cultivo y distribución de plantas de “apoyo
-          emocional”<br/><br/>
-          b. Esta empresa desea crear una aplicación web que le
-          permita llevar un control de las diferentes plantas que
-          cultiva, un registro de todos los clientes que compran y
-          un control de todos los proveedores a los cuales les
-          compra las semillas<br/><br/>
-          c. De los productos es necesario almacenar datos como:
-          nombre, sexo (macho o hembra), referencia, tamaño,
-          cantidad y una leve descripción de esta misma<br/><br/>
-          d. De los clientes es necesario almacenar datos como:
-          nombre, documento, correo, dirección, barrio, teléfono
-          de contacto<br/><br/>
-          e. De los proveedores es necesario almacenar el nombre,
-          nit, dirección, teléfono, correo, nombre del producto
-          que compra, y una descripción de la empresa y del
-          producto<br/><br/>
-          <br/><br/>
-          Consideraciones<br/><br/>
-          1. Dar solución gráfica a la problemática (maquetación en react)<br/><br/>
-          2. Se debe definir la construcción por componentes<br/><br/>
-          3. Debe tener un componente Header (debe ir todo el contenido
-          del encabezado), debe tener un componente Main (debe
-          almacenar todo el contenido principal) y debe tener un
-          componente Footer (debe tener información de contacto y redes
-          sociales)<br/><br/>
-          4. Se debe construir el proyecto haciendo uso de CSS y Bootstrap
-          (se debe usar las dos herramientas, no solamente una de
-          ellas)<br/><br/>
-          5. Definir una paleta de colores, la cual debe estar enfocada en
-          los productos de la empresa<br/><br/>
-          6. Todo el contenido debe ir en tipografía JetBrains en
-          cualquiera que sus versiones o familias<br/><br/>
-          7. Se debe incluir contenido gráfico (imágenes, logo, etc.)<br/><br/>
-          8. El quiz se hará en parejas y deben usar las herramientas de
-          git necesarias (merge, ramas, pull, et.)
+      <Container className='mb-4'>
+        <img src={logo} alt="Logo" id="home-logo" className='mt-4 mb-4' />
+        <p className='description'>
+          Bienvenido a María Suculentas SAS, una empresa líder en el cultivo y 
+          distribución de plantas de 'apoyo emocional'. Con más de 10 años de 
+          experiencia en el mercado, hemos desarrollado una amplia variedad de 
+          plantas que no solo son hermosas sino que también tienen propiedades 
+          curativas para el cuerpo y la mente. Nuestro equipo de expertos se 
+          esfuerza por ofrecerle las mejores plantas y servicios para mejorar 
+          su calidad de vida. Visítenos hoy y experimente los beneficios de 
+          tener una planta de 'apoyo emocional' en su hogar o lugar de trabajo.
         </p>
+        <Carousel>
+          {
+            carouselItems.map((item, i) => {
+              return (
+                <Carousel.Item key={i}>
+                  <img
+                    className="d-block w-100"
+                    src={item.img}
+                    alt={item.alt}
+                  />
+                  <Carousel.Caption>
+                    <h3>{item.label}</h3>
+                    <p>{item.p}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              )
+            })
+          }
+        </Carousel>
       </Container>
     </div>
   )

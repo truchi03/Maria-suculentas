@@ -7,6 +7,7 @@ export function Header(props) {
   const setPage = props.setPage
 
   return (
+    <header>
       <Navbar bg="primary" variant="dark" id="header">
         <Container>
           <Navbar.Brand 
@@ -35,5 +36,6 @@ export function Header(props) {
           </Nav>
         </Container>
       </Navbar>
+    </header>
   )
 }

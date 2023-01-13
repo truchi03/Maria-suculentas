@@ -48,6 +48,7 @@ export function ModalMS(props) {
             {props.btn1Text}
           </Button>
           <Button 
+            id="modal-primary-btn"
             variant="primary" 
             onClick={() => {props.btn2Method(); handleClose()}}
           >

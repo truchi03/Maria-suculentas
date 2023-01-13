@@ -8,8 +8,8 @@ import avena from './assets/imgs/avena.jpg'
 import hiperico from './assets/imgs/hiperico.jpg'
 import melisa from './assets/imgs/melisa.jpg'
 import lavanda from './assets/imgs/lavanda.jpg'
-import clientPic from './assets/imgs/default.gif'
-import providerPic from './assets/imgs/default.gif'
+import clientPic from './assets/imgs/client.gif'
+import providerPic from './assets/imgs/provider.gif'
 
 function App() {
   const [page, setPage] = useState('inicio')

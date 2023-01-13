@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { ModalMS } from '../../components/ModalMS'
-import defaultImg from '../../assets/imgs/default.gif'
+import clientImg from '../../assets/imgs/client.gif'
 import { useState } from 'react'
 
 export function Clients() {
@@ -23,7 +23,7 @@ export function Clients() {
     inputs.forEach(inp => {
       newClient[inp.name] = document.getElementById(inp.name).value
     })
-    clientsTemp.push({...newClient, image: defaultImg})
+    clientsTemp.push({...newClient, image: clientImg})
     localStorage.setItem('clients', JSON.stringify(clientsTemp))
     setClients(clientsTemp)
   }
@@ -45,7 +45,7 @@ export function Clients() {
         <Row>
           {
             clients.map((client, i) => {
-              return <Col key={i}>
+              return <Col key={i} className='mb-4'>
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={client.image} />
                   <Card.Body>

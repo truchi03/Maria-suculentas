@@ -15,19 +15,17 @@
   --color4: #e0e0e0;
 }
 
+header nav {
+  padding-top: 0;
+}
+
 #header, #footer {
   background-color: var(--color1) !important;
 }
 
 body {
   font-family: 'JetBrains-regular' !important;
-}
-
-header, footer {
-  padding-top: 15px;
-  padding-left: 15px;
-  height: 45px;
-  color: white;
+  color: var(--color2) !important;
 }
 
 #logo {
@@ -36,12 +34,14 @@ header, footer {
 }
 
 main {
-  min-height: 400px;
+  background-image: url('./assets/imgs/home-00-opac.jpeg');
+  background-size: cover;
+  height: 100%;
 }
 
 #main {
   position: fixed;
-  max-height: calc(100% - 120px);
+  max-height: calc(100% - 113px);
   overflow: auto;
   width: 100%;
 }
@@ -53,8 +53,32 @@ main {
   display: block;
 }
 
+#home p.description {
+  color:var(--color1) !important;
+}
+
+#home .carousel.slide .carousel-inner img {
+  height: 500px;
+}
+
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding-top: 15px;
+}
+
+#footer a {
+  color: var(--color3);
+  margin-left: 1.5rem !important;
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--color3) !important;
+  border: none !important;
+}
+
+button#modal-primary-btn {
+  background-color: var(--color2) !important;
 }

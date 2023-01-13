@@ -7,7 +7,7 @@ export function Main(props) {
   const page = props.page
 
   return (
-    <div id="main">
+    <main id="main">
       {
         page === 'productos' ?
         <Products/> :
@@ -17,6 +17,6 @@ export function Main(props) {
         <Providers/> :
         <Home/>
       }
-    </div>
+    </main>
   )
 }
